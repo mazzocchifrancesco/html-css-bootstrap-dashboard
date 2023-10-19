@@ -17,12 +17,17 @@
 <body>
 
     <!-- HEADER -->
+
     <header>
         <nav class="navbar bg-body-tertiary fixed-top h_5r">
             <div class="container-fluid justify-content-start flex-nowrap">
-                <a class="navbar-brand">Navbar</a>
-                <form class="d-flex w-100" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <a class="navbar-brand">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <form class="d-flex w-100 input-group" role="search">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+                    <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di laravel"
+                        aria-label="Search">
                 </form>
                 <div>
                     <a href="">ICONE</a>
@@ -31,27 +36,124 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
+    <!-------------------- MAIN -------------------->
+
     <main>
 
         <!-- sidebar -->
 
         <div class="d-flex mt_5r">
             <section id="sidebar" class="bg_main w_6r h-100">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit delectus culpa temporibus beatae, earum obcaecati ut asperiores quas adipisci quo officia, quae voluptate neque, quibusdam atque consequuntur. Nesciunt, debitis iste.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit delectus culpa temporibus beatae, earum
+                obcaecati ut asperiores quas adipisci quo officia, quae voluptate neque, quibusdam atque consequuntur.
+                Nesciunt, debitis iste.
             </section>
 
             <!-- core -->
 
             <section id="core" class="w-100">
-                <div class="row">
+
+                <!-- first row  -->
+
+                <div class="row ml_0">
                     <div class="col-12 bg-primary">
-                        fgdfghxfghghnfghfgh
+                        <div class="row">
+                            <div class="col-6 debug bg-danger"></div>
+                            <div class="col-3 debug bg-warning"></div>
+                            <div class="col-3 debug bg-success"></div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-8 bg-body-tertiary"></div>
-                    <div class="col-4 bg_main"></div>
+
+                <!-- main row -->
+
+                <div class="row ml_0">
+                    <div class="col-8 bg-secondary debug">
+
+                        <!-- card prossime classi -->
+
+                        <div class="card w-100">
+                            <div class="card-header">
+                                Prossime classi
+                            </div>
+                            <ul class="list-group list-group-flush p-3">
+
+                                <!-- riga intestazione  -->
+                                <li class="list-group-item d-flex text-center">
+                                    <div class="col-8 text-start">
+                                        <p>Nome</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>Data inizio</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>ROI</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>Stato</p>
+                                    </div>
+                                    <div class="col-1">
+                                        <p>Azioni</p>
+                                    </div>
+                                </li>
+
+                                <!-- righe corpo -->
+                                <li class="list-group-item d-flex text-center">
+                                    <div class="col-8 text-start">
+                                        <div class="circle_icon d-inlineblock">
+                                            <i class="fa-solid fa-code fa-l text-white"></i>
+                                        </div>
+                                        <span>Classe 75</span>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+
+                                </li>
+
+
+                                <li class="list-group-item d-flex text-center">
+                                    <div class="col-8"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-4 bg_main debug">
+
+                        <!-- card todo -->
+                        <div class="card w-100">
+                            <div class="card-header">
+
+                                todo
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                        </div>
+
+                        <!-- card grafico -->
+                        <div class="card w-100">
+                            <div class="card-header">
+                                Prossime classi
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                        </div>
+
+                    </div>
 
                 </div>
             </section>

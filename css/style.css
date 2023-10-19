@@ -21,3 +21,14 @@
 
 
 
+/* MAIN */
+
+.circle_icon {
+    background-color: #f26551;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
