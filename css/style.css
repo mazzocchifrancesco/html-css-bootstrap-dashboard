@@ -1,0 +1,23 @@
+
+:root {
+    --main_color: #3fbc97;
+    --second_color: #2f3e50;
+    --third_color: #404f67;
+}
+
+/* root class */
+
+.bg_main {background-color: var(--main_color);}
+.bg_second {background-color: var(--second_color);}
+.bg_third {background-color: var(--third_color);}
+.text_main {color: var(--main_color);}
+.text_second {color: var(--second_color);}
+.text_third {color: var(--third_color);}
+
+/* general class */
+
+
+/* HEADER */
+
+
+
