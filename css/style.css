@@ -54,7 +54,7 @@ main {
 #core {
     width: calc(100% - var(--sidebar_width));
     overflow-y: auto;
-
+    background-color: #f8f9fa;
 }
 td img {
     width: 2rem;
