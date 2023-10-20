@@ -3,32 +3,52 @@
     --main_color: #3fbc97;
     --second_color: #2f3e50;
     --third_color: #404f67;
+    --sidebar_width: 10rem;
+    --navbar_height:4rem;
+    --dark_blue: #165bba;
 }
 
 /* root class */
 
 .bg_main {background-color: var(--main_color);}
-.bg_second {background-color: var(--second_color);}
+.bg_darkblue {background-color: var(--dark_blue);}
 .bg_third {background-color: var(--third_color);}
 .text_main {color: var(--main_color);}
 .text_second {color: var(--second_color);}
 .text_third {color: var(--third_color);}
+.nav_height {height: var(--navbar_height);}
 
 /* general class */
 
-
 /* HEADER */
 
+.searchbar {
+    background-color: #e5e5e5;
+    border: 0px;
+
+}
 
 
 /* MAIN */
 
-.circle_icon {
-    background-color: #f26551;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main { 
+       height: calc(100vh - var(--navbar_height));
+       margin-top: var(--navbar_height);
+    }
+/* sidebar */
+
+#sidebar {
+    width: var(--sidebar_width);
+    background-image: url(../img/sidebar-bg.png);
+    background-color: #051e34;
+
 }
+
+/* core */
+
+#core {
+    width: calc(100% - var(--sidebar_width));
+    overflow-y: auto;
+
+}
+td img {width: 2rem;}

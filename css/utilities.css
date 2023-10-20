@@ -10,6 +10,10 @@
 
 /* margin */
 
+.mr_0-5r {margin-right: 0.5rem;}
+.mr_1r {margin-right: 1rem;}
+
+
 .mt_5r {margin-top: 5rem;}
 
 .ml_0 {margin-left: 0;}
@@ -22,4 +26,9 @@
 
 .debug {min-height: 5rem;}
 
+
+/* backgrounds */
+
+/* text */
+.text_orange {color: orange;}
 
