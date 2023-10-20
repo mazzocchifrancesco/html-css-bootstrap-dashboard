@@ -41,7 +41,12 @@ main {
     width: var(--sidebar_width);
     background-image: url(../img/sidebar-bg.png);
     background-color: #051e34;
+    padding: 1.5rem;
+}
 
+#sidebar .btn {
+    text-align: left;
+    color: white;
 }
 
 /* core */
