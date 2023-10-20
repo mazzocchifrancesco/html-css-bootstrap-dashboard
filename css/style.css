@@ -1,33 +1,24 @@
 
 :root {
-    --main_color: #3fbc97;
-    --second_color: #2f3e50;
-    --third_color: #404f67;
     --sidebar_width: 10rem;
-    --navbar_height:4rem;
-    --dark_blue: #165bba;
+    --sidebar_collapsed_width: 4rem;
+    --navbar_height:4.5rem;
+    --dark_blue: #1359b7;
 }
 
 /* root class */
 
-.bg_main {background-color: var(--main_color);}
-.bg_darkblue {background-color: var(--dark_blue);}
-.bg_third {background-color: var(--third_color);}
-.text_main {color: var(--main_color);}
-.text_second {color: var(--second_color);}
-.text_third {color: var(--third_color);}
 .nav_height {height: var(--navbar_height);}
+.bg_darkblue {background-color: var(--dark_blue);}
 
 /* general class */
+
 p {margin: 0;}
+body {font-family: sans-serif;}
+
 /* HEADER */
 
-.searchbar {
-    background-color: #e5e5e5;
-    border: 0px;
-
-}
-
+.searchbar {background-color: #e5e5e5;}
 
 /* MAIN */
 
@@ -35,21 +26,17 @@ main {
        height: calc(100vh - var(--navbar_height));
        margin-top: var(--navbar_height);
     }
+
 /* sidebar */
 
 #sidebar {
     width: var(--sidebar_width);
     background-image: url(../img/sidebar-bg.png);
     background-color: #051e34;
-    padding: 1.5rem;
-}
-
-#sidebar .btn {
-    text-align: left;
-    color: white;
 }
 
 /* core */
+
 #plus_button {
     font-size: 2.5rem;
     height: 3rem;
@@ -59,6 +46,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+.hide+span {display: none;}
 .offcanvas {width: 900px!important;}
 
 #core {
@@ -72,3 +60,11 @@ td img {
 }
 td {vertical-align: middle;}
 td:first-child {text-align: left;}
+
+/* mediaquery */
+
+@media all and (max-width:768px) {
+
+    #sidebar {width: var(--sidebar_collapsed_width);}
+    #core {width: calc(100% - var(--sidebar_collapsed_width));}
+}

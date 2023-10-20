@@ -19,23 +19,25 @@
     <!-- HEADER -->
 
     <header>
-        <nav class="navbar bg-body-tertiary fixed-top nav_height">
+        <nav class="navbar bg-body-tertiary fixed-top nav_height py-2">
             <div class="container-fluid justify-content-start flex-nowrap">
                 <a class="navbar-brand">
-                    <img src="img/logo.svg" alt="">
+                    <img src="img/logo.svg" alt="logo" class="d-none d-md-inline-block">
+                    <img src="img/mobile-logo.png" alt="logo_mobile" class="h_3r d-md-none">
                 </a>
                 <div class="input-group">
                     <div class="input-group-text searchbar" id="btnGroupAddon2">
                         <i class="fa-solid fa-magnifying-glass btn"></i>
                     </div>
-                    <input type="text" class="form-control searchbar" placeholder="Prova a cercare: Lezioni di Laravel"
-                        aria-label="Input group example" aria-describedby="btnGroupAddon2">
+                    <input type="text" class="form-control searchbar border border-0"
+                        placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Input group example"
+                        aria-describedby="btnGroupAddon2">
                 </div>
                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group me-2" role="group" aria-label="First group">
-                        <button type="button" class="btn"><i class="fa-solid fa-list-ul"></i></button>
-                        <button type="button" class="btn"><i class="fa-solid fa-circle-question"></i></button>
-                        <button type="button" class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        <button type="button" class="btn d-none d-md-inline-block"><i class="fa-solid fa-list-ul"></i></button>
+                        <button type="button" class="btn d-none d-md-inline-block"><i class="fa-solid fa-circle-question"></i></button>
+                        <button type="button" class="btn d-none d-md-inline-block"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                         <div class="dropdown">
                             <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-solid fa-bell text_orange"></i>
@@ -57,30 +59,29 @@
 
         <!-- sidebar -->
 
-
-        <section id="sidebar" class="d-flex flex-column justify-content-between">
+        <section id="sidebar" class="d-flex flex-column justify-content-between py-4 p-md-4">
 
             <!-- top sidebar -->
             <div id="top-sidebar" class="d-flex flex-column">
-                <div class="btn">
+                <div class="btn text-white text-md-start">
                     <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
+                    <span class="d-none d-md-inline">Home</span>
                 </div>
-                <div class="btn">
+                <div class="btn text-white text-md-start">
                     <i class="fa-solid fa-chart-simple"></i>
-                    <span>Stats</span>
+                    <span class="d-none d-md-inline">Stats</span>
                 </div>
-                <div class="btn">
+                <div class="btn text-white text-md-start">
                     <i class="fa-solid fa-signal"></i>
-                    <span>Signals</span>
+                    <span class="d-none d-md-inline">Signals</span>
                 </div>
             </div>
 
             <!-- bottom sidebar -->
             <div id="bottom-sidebar" class="d-flex flex-column">
-                <div class="btn">
+                <div class="btn text-white text-md-start">
                     <i class="fa-solid fa-gear"></i>
-                    <span>Admin</span>
+                    <span class="d-none d-md-inline">Admin</span>
                 </div>
             </div>
         </section>
@@ -93,7 +94,85 @@
             <div class="row text-white">
                 <div class="col-12 bg-primary py-4">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-4 col-md-3 mb-3 order-sm-2">
+                            <span>Nuovo studente</span>
+                            <button id="plus_button" class="btn btn-outline-light" type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">+</button>
+                            <div class="offcanvas offcanvas-end text-black fw-medium" tabindex="-1" id="offcanvasRight"
+                                aria-labelledby="offcanvasRightLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="validationDefault01" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" id="validationDefault01" value=""
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationDefault02" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" id="validationDefault02" value=""
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationDefaultUsername" class="form-label">Email</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                <input type="text" class="form-control" id="validationDefaultUsername"
+                                                    aria-describedby="inputGroupPrepend2" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationDefault01" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="validationDefault01"
+                                                value="" required>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="validationDefault03" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" id="validationDefault03" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationDefault03" class="form-label">Città</label>
+                                            <input type="text" class="form-control" id="validationDefault03" required>
+                                        </div>
+                                        <div class="col-md-4 d-sm-none .d-md-block">
+                                            <label for="validationDefault04" class="form-label">Stato</label>
+                                            <select class="form-select" id="validationDefault04" required>
+                                                <option selected disabled value="">Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="validationDefault05" class="form-label">CAP</label>
+                                            <input type="text" class="form-control" id="validationDefault05" required>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="formFile" class="form-label">Foto</label>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="invalidCheck2" required>
+                                                <label class="form-check-label" for="invalidCheck2">
+                                                    Seleziona per proseguire
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" type="submit">Salva</button>
+                                            <button class="btn btn-warning" type="submit">Svuota</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-6 mb-3 order-sm-0">
                             <div>
                                 <span class="fs-3">Boolean</span>
                                 <span class="badge rounded-pill text-white bg_darkblue">Piano blaze</span>
@@ -101,89 +180,18 @@
                             <div>
                                 <span class="badge rounded-pill text-white bg_darkblue">3 app</span>
                                 <i class="fa-solid fa-angles-right"></i>
-                                <span class="badge rounded-pill text-white bg_darkblue">Boolean mobile app</span>
-                                <span class="badge rounded-pill text-white bg_darkblue">Boolean web app</span>
-                                <span class="badge rounded-pill text-white bg_darkblue">Boolean blog app</span>
-
+                                <div class="d-inline d-none d-md-inline">
+                                    <span class="badge rounded-pill text-white bg_darkblue">Boolean mobile app</span>
+                                    <span class="badge rounded-pill text-white bg_darkblue">Boolean web app</span>
+                                    <span class="badge rounded-pill text-white bg_darkblue">Boolean blog app</span>
+                                </div>
+                                <span class="badge rounded-pill text-white bg_darkblue d-md-none">+</span>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-12 col-sm-4 col-md-3 mb-3 order-sm-1">
                             <p>studenti online negli ultimi 30 minuti</p>
                             <p class="fs-2">125</p>
                         </div>
-                        <div class="col-3 ">
-                            <span>Nuovo studente</span>
-                            <button id="plus_button" class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
-
-                            <div class="offcanvas offcanvas-end text-black fw-medium" tabindex="-1" id="offcanvasRight"
-                                aria-labelledby="offcanvasRightLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <form class="row g-3">
-                                        <div class="col-md-6">
-                                          <label for="validationDefault01" class="form-label">Nome</label>
-                                          <input type="text" class="form-control" id="validationDefault01" value="" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <label for="validationDefault02" class="form-label">Cognome</label>
-                                          <input type="text" class="form-control" id="validationDefault02" value="" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                          <label for="validationDefaultUsername" class="form-label">Email</label>
-                                          <div class="input-group">
-                                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                            <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="validationDefault01" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="validationDefault01" value="" required>
-                                          </div>
-                                        <div class="col-md-12">
-                                          <label for="validationDefault03" class="form-label">Indirizzo</label>
-                                          <input type="text" class="form-control" id="validationDefault03" required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="validationDefault03" class="form-label">Città</label>
-                                            <input type="text" class="form-control" id="validationDefault03" required>
-                                          </div>
-                                        <div class="col-md-4">
-                                          <label for="validationDefault04" class="form-label">Stato</label>
-                                          <select class="form-select" id="validationDefault04" required>
-                                            <option selected disabled value="">Choose...</option>
-                                            <option>...</option>
-                                          </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                          <label for="validationDefault05" class="form-label">CAP</label>
-                                          <input type="text" class="form-control" id="validationDefault05" required>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <label for="formFile" class="form-label">Foto</label>
-                                            <input class="form-control" type="file" id="formFile">
-                                          </div>
-                                        <div class="col-12">
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                                            <label class="form-check-label" for="invalidCheck2">
-                                              Seleziona per proseguire
-                                            </label>
-                                          </div>
-                                        </div>
-                                        <div class="col-12">
-                                          <button class="btn btn-primary" type="submit">Salva</button>
-                                          <button class="btn btn-warning" type="submit">Svuota</button>
-                                        </div>
-                                      </form>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -193,7 +201,7 @@
             <div class="row py-2">
 
                 <!-- PRIMA COLONNA -->
-                <div class="col-8">
+                <div class="col-md-8 col-12">
 
                     <!-- PROSSIME CLASSI -->
 
@@ -208,8 +216,8 @@
                                     <tr>
                                         <!-- ok, COL non serve senza flex ma la dimensione in percentuale ha effetto ed è comoda in sta classe -->
                                         <th class=" text-start">Nome</th>
-                                        <th class="col-2">Data inizio</th>
-                                        <th class="col-1">ROI</th>
+                                        <th class="col-2 d-none d-sm-table-cell">Data inizio</th>
+                                        <th class="col-1 d-none d-sm-table-cell">ROI</th>
                                         <th class="col-1">Stato</th>
                                         <th class="col-1">Azioni</th>
                                     </tr>
@@ -222,8 +230,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 75</span>
                                         </td>
-                                        <td>15 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">15 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -240,8 +248,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 76</span>
                                         </td>
-                                        <td>16 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">16 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -258,8 +266,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 77</span>
                                         </td>
-                                        <td>17 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">17 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-warning">process</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -276,8 +284,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 78</span>
                                         </td>
-                                        <td>18 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">18 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -294,8 +302,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 79</span>
                                         </td>
-                                        <td>19 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">19 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-danger">failed</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -312,8 +320,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 80</span>
                                         </td>
-                                        <td>20 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">20 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -330,8 +338,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 81</span>
                                         </td>
-                                        <td>21 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">21 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-danger">failed</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -348,8 +356,8 @@
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 82</span>
                                         </td>
-                                        <td>22 feb 2021</td>
-                                        <td>20%</td>
+                                        <td class="d-none d-sm-table-cell">22 feb 2021</td>
+                                        <td class="d-none d-sm-table-cell">20%</td>
                                         <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
@@ -364,7 +372,6 @@
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
 
                     <!-- F.A.Q  -->
@@ -413,7 +420,6 @@
                                     <p class="accordion-body">
                                         Certo, a tuo rischio e pericolo.
                                     </p>
-
                                 </div>
                             </div>
                         </div>
@@ -422,7 +428,7 @@
                 </div>
 
                 <!-- SECONDA COLONNA -->
-                <div class="col-4">
+                <div class="col-md-4 col-12">
 
                     <!-- card todo -->
                     <div class="card mb-4" id="todo">
@@ -479,17 +485,12 @@
                         </div>
                     </div>
 
-
-
                     <!-- chiusura colonna 4 -->
                 </div>
-
         </section>
-
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
