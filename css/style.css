@@ -56,4 +56,9 @@ main {
     overflow-y: auto;
 
 }
-td img {width: 2rem;}
+td img {
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+td {vertical-align: middle;}
+td:first-child {text-align: left;}

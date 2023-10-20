@@ -26,28 +26,28 @@
                 </a>
                 <div class="input-group">
                     <div class="input-group-text searchbar" id="btnGroupAddon2">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass btn"></i>
                     </div>
                     <input type="text" class="form-control searchbar" placeholder="Prova a cercare: Lezioni di Laravel"
                         aria-label="Input group example" aria-describedby="btnGroupAddon2">
                 </div>
                 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                     <div class="btn-group me-2" role="group" aria-label="First group">
-                      <button type="button" class="btn"><i class="fa-solid fa-list-ul"></i></button>
-                      <button type="button" class="btn"><i class="fa-solid fa-circle-question"></i></button>
-                      <button type="button" class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                      <div class="dropdown">
-                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-bell text_orange"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </div>
+                        <button type="button" class="btn"><i class="fa-solid fa-list-ul"></i></button>
+                        <button type="button" class="btn"><i class="fa-solid fa-circle-question"></i></button>
+                        <button type="button" class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        <div class="dropdown">
+                            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell text_orange"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                     </div>
-            </div>
+                </div>
         </nav>
     </header>
 
@@ -74,8 +74,8 @@
                     <i class="fa-solid fa-signal"></i>
                     <span>Signals</span>
                 </div>
-            </div>    
-        
+            </div>
+
             <!-- bottom sidebar -->
             <div id="bottom-sidebar" class="d-flex flex-column">
                 <div class="btn">
@@ -107,11 +107,11 @@
 
                             </div>
                         </div>
-                        <div class="col-3 debug">
+                        <div class="col-3 ">
                             <p>studenti online negli ultimi 30 minuti</p>
                             <p>125</p>
                         </div>
-                        <div class="col-3 debug">
+                        <div class="col-3 ">
                             <span>Nuovo studente</span>
                             <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
@@ -133,40 +133,43 @@
                 </div>
             </div>
 
-            <!-- main row -->
+            <!------------------------------------------------ main row ---------------------------------------------------------->
 
-            <div class="row">
+            <div class="row py-2">
 
                 <!-- PRIMA COLONNA -->
-                <div class="col-8 bg-secondary">
+                <div class="col-8">
 
                     <!-- card prossime classi -->
 
                     <div class="card w-100">
-                        <div class="card-header">
+                        <div class="card-header fs-3">
                             Prossime classi
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive px-3">
 
-                            <table class="table">
+                            <table class="table text-center">
                                 <thead>
                                     <tr>
-                                        <th class="col">Nome</th>
+                                        <!-- ok, COL non serve senza flex ma la dimensione in percentuale ha effetto ed è comoda in sta classe -->
+                                        <th class=" text-start">Nome</th>
                                         <th class="col-2">Data inizio</th>
                                         <th class="col-1">ROI</th>
                                         <th class="col-1">Stato</th>
                                         <th class="col-1">Azioni</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+
+                                <tbody class="px-2">
+
                                     <tr>
-                                        <td class="">
+                                        <td>
                                             <img src="img/class-avatar-no-background.png" alt="">
                                             <span>Classe 75</span>
                                         </td>
                                         <td>15 feb 2021</td>
                                         <td>20%</td>
-                                        <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                        <td><span class="badge rounded-pill bg-success">Done</span></td>
                                         <td class="d-flex">
                                             <button type="button" class="btn btn-outline-secondary mr_0-5r">
                                                 <i class="fa-solid fa-pencil"></i>
@@ -175,8 +178,134 @@
                                                 <i class="fa-solid fa-trash"></i>
                                             </button>
                                         </td>
-
                                     </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 76</span>
+                                        </td>
+                                        <td>16 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-success">Done</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 77</span>
+                                        </td>
+                                        <td>17 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-warning">process</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 78</span>
+                                        </td>
+                                        <td>18 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-success">Done</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 79</span>
+                                        </td>
+                                        <td>19 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-danger">failed</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 80</span>
+                                        </td>
+                                        <td>20 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-success">Done</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 81</span>
+                                        </td>
+                                        <td>21 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-danger">failed</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <img src="img/class-avatar-no-background.png" alt="">
+                                            <span>Classe 82</span>
+                                        </td>
+                                        <td>22 feb 2021</td>
+                                        <td>20%</td>
+                                        <td><span class="badge rounded-pill bg-success">Done</span></td>
+                                        <td class="d-flex">
+                                            <button type="button" class="btn btn-outline-secondary mr_0-5r">
+                                                <i class="fa-solid fa-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
